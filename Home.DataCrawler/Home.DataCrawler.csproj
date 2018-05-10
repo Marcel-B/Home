@@ -12,4 +12,13 @@
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0-preview2-final" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="homecert.key" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+  </ItemGroup>
 </Project>

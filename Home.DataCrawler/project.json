@@ -1,0 +1,7 @@
+﻿{
+  "publishOptions": {
+    "include": [
+      "testCert.pfx"
+    ]
+  }
+}
