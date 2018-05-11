@@ -29,9 +29,9 @@ namespace Home.DataCrawler
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-			var str = Configuration.GetConnectionString("DefaultMy");
-			//services.AddDbContext<ValueContext>(x => x.UseSqlite(str));
-			services.AddDbContext<ValueContext>(x => x.UseMySql(str));
+			var str = Configuration.GetConnectionString("Default");
+			services.AddDbContext<ValueContext>(x => x.UseSqlite(str));
+			//services.AddDbContext<ValueContext>(x => x.UseMySql(str));
 			//services.AddHsts(options =>
             //{
             //    options.Preload = true;
