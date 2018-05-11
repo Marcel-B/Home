@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home.DataCrawler", "Home.DataCrawler\Home.DataCrawler.csproj", "{0FDE16BB-501E-450E-8B24-00AB46F03EE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home.DataCrawler.Tests", "Home.DataCrawler.Tests\Home.DataCrawler.Tests.csproj", "{EF7D1D64-E99D-4592-AA4E-10333A5ACAF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home.Domain", "Home.Domain\Home.Domain.csproj", "{32D880CF-5A8E-4679-8160-08308EC669A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +17,13 @@ Global
 		{0FDE16BB-501E-450E-8B24-00AB46F03EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FDE16BB-501E-450E-8B24-00AB46F03EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FDE16BB-501E-450E-8B24-00AB46F03EE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF7D1D64-E99D-4592-AA4E-10333A5ACAF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7D1D64-E99D-4592-AA4E-10333A5ACAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7D1D64-E99D-4592-AA4E-10333A5ACAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7D1D64-E99D-4592-AA4E-10333A5ACAF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32D880CF-5A8E-4679-8160-08308EC669A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32D880CF-5A8E-4679-8160-08308EC669A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32D880CF-5A8E-4679-8160-08308EC669A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32D880CF-5A8E-4679-8160-08308EC669A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

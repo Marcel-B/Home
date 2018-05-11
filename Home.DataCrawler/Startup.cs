@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Home.DataCrawler.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
@@ -27,6 +29,8 @@ namespace Home.DataCrawler
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+			var str = Configuration.GetConnectionString("Default");
+			services.AddDbContext<ValueContext>(x => x.UseSqlite(str));
 			//services.AddHsts(options =>
             //{
             //    options.Preload = true;
