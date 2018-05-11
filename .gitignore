@@ -287,3 +287,7 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 Home.DataCrawler/appsettings.json
+
+.DS_Store
+Home.DataCrawler/My.db
+
