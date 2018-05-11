@@ -10,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Home.DataCrawler.Migrations
 {
     [DbContext(typeof(ValueContext))]
-    partial class ValueContextModelSnapshot : ModelSnapshot
+    [Migration("20180511204704_Another")]
+    partial class Another
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

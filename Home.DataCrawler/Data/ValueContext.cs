@@ -10,5 +10,6 @@ namespace Home.DataCrawler.Data
 			: base(builder) { }
 
 		public DbSet<Value> Values { get; set; }
+		public DbSet<MeasurePoint> MeasurePoints { get; set; }
 	}
 }
