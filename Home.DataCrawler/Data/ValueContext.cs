@@ -8,7 +8,6 @@ namespace Home.DataCrawler.Data
 	{
 		public ValueContext(DbContextOptions<ValueContext> builder)
 			: base(builder) { }
-		public ValueContext() { }
 
 		public DbSet<Value> Values { get; set; }
 	}
