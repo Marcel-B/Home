@@ -54,12 +54,12 @@ namespace Home.DataCrawler.Code
 
 		public async void SetData(MeasurePoint measurePoint)
 		{
-			_logger.LogInformation($"{Points.Count} {measurePoint.ChannelId}|{measurePoint.PointName} = {measurePoint.PointValue}");
+			//_logger.LogInformation($"{Points.Count} {measurePoint.ChannelId}|{measurePoint.PointName} = {measurePoint.PointValue}");
 			if (h.Contains(measurePoint.ChannelId) && n.Contains(measurePoint.PointName))
 			{
 				Points.Add(measurePoint);
 				_logger.LogInformation($"{measurePoint.Guid} ({measurePoint.PointName} | {measurePoint.ChannelId} value {measurePoint.PointValue})added to List");
-				if (Points.Count >= 10)
+				if (Points.Count >= 5)
 				{
 					var newList = Points.ToList();
 					Points.Clear();
@@ -78,17 +78,17 @@ namespace Home.DataCrawler.Code
 			try
 			{
 				var db = _service.GetService<ValueContext>();
-				foreach (var obj in data)
-				{
-					db.MeasurePoints.Add(obj);
-					Console.WriteLine(obj.ChannelId);
-				}
+				//foreach (var obj in data)
+				//{
+				//	db.MeasurePoints.Add(obj);
+				//	_logger.LogInformation(obj.ChannelId);
+				//}
+				await db.MeasurePoints.AddRangeAsync(data);
 				await db.SaveChangesAsync();
 			}
 			catch (Exception ex)
 			{
 				_logger.LogError(ex.Message, ex);
-				//Console.WriteLine(ex.Message);
 			}
 		}
 	}

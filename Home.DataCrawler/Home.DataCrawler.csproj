@@ -26,4 +26,9 @@
     <ProjectReference Include="..\Home.Domain\Home.Domain.csproj" />
     <ProjectReference Include="..\Home.Worker\Home.Worker.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="My.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

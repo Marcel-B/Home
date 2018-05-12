@@ -11,5 +11,6 @@ namespace Home.DataCrawler.Data
 
 		public DbSet<Value> Values { get; set; }
 		public DbSet<MeasurePoint> MeasurePoints { get; set; }
+		public DbSet<HomeMaticState> HomeMaticStates { get; set; }
 	}
 }
