@@ -42,7 +42,15 @@ namespace Home.DataCrawler.Controllers
                 "OEQ0707446:1", // Fenster RechtsSchlafzimmer
                 "OEQ0222677:1", // TerrasseRechts
                 "OEQ0226938:1", // TerrasseLinks
-                "NEQ1774153:1", // BadHinten Temperatur
+                "NEQ1774153:4", // BadHinten Temperatur
+                "NEQ1778676:4", // HeizungWohnen
+            };
+            var n = new HashSet<string>{
+                "TEMPERATURE",
+                "BRIGHTNESS",
+                "HUMIDITY",
+                "STATE",
+                "ACTUAL_TEMPERATURE",
             };
 
 
@@ -55,7 +63,9 @@ namespace Home.DataCrawler.Controllers
             foreach (var v in values)
             {
                 var id = v.@params[1].ToString();
+                var name = v.@params[2].ToString();
                 if (!h.Contains(id)) continue;
+                if (!n.Contains(name)) continue;
                 
                 var tmp = new MeasurePoint();
                 tmp.Guid = Guid.NewGuid().ToString();

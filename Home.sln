@@ -2,11 +2,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27705.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Home.DataCrawler", "Home.DataCrawler\Home.DataCrawler.csproj", "{0FDE16BB-501E-450E-8B24-00AB46F03EE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home.DataCrawler", "Home.DataCrawler\Home.DataCrawler.csproj", "{0FDE16BB-501E-450E-8B24-00AB46F03EE3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Home.DataCrawler.Tests", "Home.DataCrawler.Tests\Home.DataCrawler.Tests.csproj", "{EF7D1D64-E99D-4592-AA4E-10333A5ACAF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home.DataCrawler.Tests", "Home.DataCrawler.Tests\Home.DataCrawler.Tests.csproj", "{EF7D1D64-E99D-4592-AA4E-10333A5ACAF2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home.Domain", "Home.Domain\Home.Domain.csproj", "{589DFCF2-CC09-4E21-8B34-3738492D433B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home.Worker", "Home.Worker\Home.Worker.csproj", "{702DC41F-BA76-4381-AEA2-E70193F3352D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{589DFCF2-CC09-4E21-8B34-3738492D433B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{589DFCF2-CC09-4E21-8B34-3738492D433B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{589DFCF2-CC09-4E21-8B34-3738492D433B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{702DC41F-BA76-4381-AEA2-E70193F3352D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{702DC41F-BA76-4381-AEA2-E70193F3352D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{702DC41F-BA76-4381-AEA2-E70193F3352D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{702DC41F-BA76-4381-AEA2-E70193F3352D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
