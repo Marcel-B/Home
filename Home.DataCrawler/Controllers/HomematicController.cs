@@ -21,15 +21,12 @@ namespace Home.DataCrawler.Controllers
         }
 
         [HttpGet("ll")]
-        public IActionResult GetAction()
+        public ActionResult<IEnumerable<HomeMaticState>> GetAction()
         {
             var db = _service.GetService<ValueContext>();
-            var ll = db.MeasurePoints;
-            foreach (var l in ll)
-            {
-                Console.WriteLine(l.PointName);
-            }
-            return Ok();
+            var ll = db.HomeMaticStates;
+
+			return Ok(ll);
         }
 
         [HttpPost("setstates")]

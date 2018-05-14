@@ -23,10 +23,10 @@ namespace Home.DataCrawler.Controllers
         // GET api/values
         [HttpGet]
 		[ProducesResponseType(200)] 
-		public async Task<ActionResult<IEnumerable<Value>>> Get()
+		public async Task<ActionResult<IEnumerable<HomeMaticState>>> Get()
         {
 			var db = _service.GetService<ValueContext>();
-			return await db.Values.ToListAsync();
+			return await db.HomeMaticStates.ToListAsync();
         }
 
         // GET api/values/5
