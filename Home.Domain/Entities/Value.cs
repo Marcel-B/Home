@@ -5,8 +5,7 @@ namespace Home.Domain.Entities
 {
 	public class Value
 	{
-		public Value()
-		{ }
+		public Value() { }
 
 		[Key]
 		public int Id { get; set; }

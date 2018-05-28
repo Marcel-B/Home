@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Home.DataCrawler.Code;
 
 namespace Home.DataCrawler
 {
@@ -29,9 +30,16 @@ namespace Home.DataCrawler
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-			var str = Configuration.GetConnectionString("DefaultMy");
-			//services.AddDbContext<ValueContext>(x => x.UseSqlite(str));
-			services.AddDbContext<ValueContext>(x => x.UseMySql(str));
+			var str = Configuration.GetConnectionString("Default");
+			services.AddDbContext<ValueContext>(x => x.UseSqlite(str));
+			services.AddSingleton<DataCruncher>();
+			services.AddLogging(builder =>
+            {
+                builder.AddConfiguration(Configuration.GetSection("Logging"))
+                    .AddConsole()
+                    .AddDebug();
+            });
+			//services.AddDbContext<ValueContext>(x => x.UseMySQL(str));
 			//services.AddHsts(options =>
             //{
             //    options.Preload = true;

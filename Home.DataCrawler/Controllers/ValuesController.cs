@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Home.DataCrawler.Data;
 using Microsoft.AspNetCore.Mvc;
+using Home.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Home.DataCrawler.Controllers
 {
@@ -10,11 +14,19 @@ namespace Home.DataCrawler.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+		private readonly IServiceProvider _service;
+
+		public ValuesController(IServiceProvider service){
+			_service = service;
+		}
+
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+		[ProducesResponseType(200)] 
+		public async Task<ActionResult<IEnumerable<HomeMaticState>>> Get()
         {
-            return new string[] { "value1", "value2" };
+			var db = _service.GetService<ValueContext>();
+			return await db.HomeMaticStates.ToListAsync();
         }
 
         // GET api/values/5
